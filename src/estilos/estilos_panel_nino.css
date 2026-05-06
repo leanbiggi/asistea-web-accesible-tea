@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+.nino-header {
+    background-color: #4CAF50;
+    color: rgb(0, 32, 4)te;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nino-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+.nino-header a {
+    color: rgb(0, 32, 4);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+.nino-header a:hover{
+    text-decoration: underline;  /*al pasar el puntero del mouse encima, muestra subrayado */
+}
+.actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+.actividad-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid #ddd;
+}
+.actividad-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.actividad-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+.actividad-card h2 {
+    color: #333;
+    margin: 15px 10px 5px;
+    font-size: 1.3em;
+}
+.actividad-card p {
+    color: #666;
+    font-size: 0.9em;
+    padding: 0 15px 15px;
+    margin: 0;
+}
+.actividad-card .estado-completada {
+    background-color: #8bc34a;
+    color: rgb(0, 32, 4);
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: inline-block;
+}
+.actividad-card a.boton-ir {
+    display: block;
+    background-color: #2196F3;
+    color: rgb(0, 32, 4);
+    padding: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+    border-top: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+.actividad-card a.boton-ir:hover {
+    background-color: #1976D2;
+}

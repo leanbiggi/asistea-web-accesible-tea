@@ -1,0 +1,235 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eeeeee; /* Un color de fondo suave. Es mejor no poner blanco puro*/
+    margin: 0;
+    padding: 0; /* Ajustamos padding general para el header */
+    box-sizing: border-box;
+    color: #151e24;
+    text-align: center;
+}
+
+/* Nuevo estilo para el Header de bienvenida */
+.hero-header {
+    background-color: #242f37; 
+    color: #ffffff;
+    padding: 60px 20px; /* Más padding para una sección destacada */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #c85a21;
+    margin-bottom: 30px; /* Espacio debajo del header */
+}
+
+.hero-header h1 {
+    font-size: 3.5em; /* Título más grande */
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.hero-header p {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Contenedor principal para el resto del contenido */
+.contenedor-principal {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Ancho máximo para el login/registro */
+    width: 90%;
+    box-sizing: border-box;
+    margin: 30px auto; /* Centrar y añadir margen vertical */
+}
+
+h2 {
+    color: #00796b; /* Verde oscuro para subtítulos */
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    margin-top: 40px; /* Espacio para separar secciones */
+    text-align: center; /* Asegura el centrado */
+}
+
+/* Estilos de las cajas de información */
+.seccion-informacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Espacio entre las cajas */
+    max-width: 1200px; /* Ancho máximo para las cajas de info */
+    margin: 40px auto; /* Centrar y añadir margen */
+    padding: 0 20px;
+}
+.seccion-informacion h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    color: #00796b;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.caja-info {
+    background-color: #ffffff; 
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    flex: 1; /* Permite que las cajas crezcan */
+    min-width: 280px; /* Ancho mínimo antes de que se envuelvan */
+    max-width: 380px; /* Ancho máximo preferido */
+    box-sizing: border-box;
+    text-align: left; /* Texto alineado a la izquierda */
+}
+
+.caja-info h3 {
+    color: #151e24; /* Verde más oscuro para títulos de caja */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.caja-info p {
+    font-size: 1em;
+    color: black;
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Ejemplo de actividad */
+.ejemplo-actividad-seccion {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ejemplo-actividad-seccion h3 {
+    color: #00796b;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.ejemplo-actividad-contenido {
+    display: flex;
+    flex-direction: column; /* Apilado por defecto */
+    align-items: center;
+    gap: 20px;
+}
+
+.ejemplo-actividad-contenido img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ejemplo-actividad-texto {
+    text-align: left;
+    color: black;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* --- Estilos específicos para las imágenes de la Guía Rápida (Cómo usar) --- */
+.caja-info img.img-guia-rapida {
+    /* Limita el ancho de la imagen para que no desborde la caja */
+    width: 100%; 
+    max-width: 100%; /* Reducimos el tamaño máximo a 150px */
+    height: auto;
+    /* Centrado de la imagen dentro de la caja */
+    display: block;
+    margin: 0 auto 15px auto; /* Centra horizontalmente y añade margen inferior */
+    
+    /* Mantenemos el estilo visual */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive para el ejemplo de actividad */
+@media (min-width: 768px) {
+    .ejemplo-actividad-contenido {
+        flex-direction: row; /* En fila en pantallas grandes */
+        text-align: left;
+    }
+    .ejemplo-actividad-contenido img {
+        max-width: 45%; /* La imagen toma casi la mitad del espacio */
+    }
+}
+
+
+.botones-acceso {
+    display: flex;
+    flex-direction: column; /* Botones apilados verticalmente por defecto */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 30px;
+}
+
+.boton {
+    display: block;
+    width: 80%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.boton-padre {
+    background-color: #00796b;
+}
+
+.boton-padre:hover {
+    background-color: #00544a;
+    transform: translateY(-3px);
+}
+
+.boton-nino {
+    background-color: #004a54;
+}
+
+.boton-nino:hover {
+    background-color: #00373e;
+    transform: translateY(-3px);
+}
+/* MODIFICACIÓN PARA EL BOTÓN DE EJEMPLO */
+.boton-ejemplo {
+    display: block; /* Lo convierte en un elemento de bloque */
+    max-width: 50%; /* Limita su ancho máximo al 50% del padre */
+    margin: 15px auto 0 auto; /* Centra el botón horizontalmente y le da margen superior */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    text-align: center;
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.boton-ejemplo:hover {
+    background-color: #004d40; /* Un tono más oscuro al pasar el ratón */
+}
+
+/* Responsive para pantallas más grandes: botones uno al lado del otro */
+@media (min-width: 600px) {
+    .botones-acceso {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .boton {
+        width: auto;
+        min-width: 220px;
+    }
+}

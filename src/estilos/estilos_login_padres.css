@@ -1,0 +1,162 @@
+body {
+font-family: sans-serif;
+background-color: #e0f7fa; /* Un color de fondo amigable */
+/*display: flex;
+justify-content: center;
+align-items: center;*/
+min-height: 100vh;
+margin: 0;
+}
+h1 {
+    font-size: 30px; /* Título más grande */
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #00796b;
+    text-align: center;
+}
+
+
+
+
+/*
+ * Nuevos estilos para el encabezado
+ * que contiene el botón y el título.
+ */
+.header-login {
+    display: flex; /* Convierte el header en un contenedor flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea los elementos a la izquierda del contenedor */
+    padding: 20px; /* Añade espacio alrededor del contenido */
+    box-sizing: border-box;
+}
+
+/* * Estilo del botón "Volver".
+ * Cambia 'flex' por 'inline-flex' para que no ocupe todo el ancho.
+ */
+.boton-volver {
+    background-color: transparent;
+    color: #00796b;
+    border: 2px solid #00796b;
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex; /* CAMBIO CRUCIAL AQUÍ */
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    margin-bottom: 20px; /* Separación del título */
+}
+
+.boton-volver:hover {
+    background-color: #e0f2f1;
+    color: #004d40;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.boton-volver i {
+    font-size: 1.1em;
+}
+
+/* Estilos para el título para que se posicione mejor */
+.header-login h1 {
+    width: 100%; /* El título ocupa todo el ancho */
+    text-align: center; /* Se centra dentro de ese ancho */
+}
+
+
+
+
+#notificacion_aria {
+    align-self: center;
+    /* opcional: si quieres que ocupe el 100% del ancho del header */
+    width: 100%;
+    
+}
+
+
+.formularios-padres-container {
+    display: flex; /* Habilita Flexbox */
+    flex-wrap: wrap; /* Permite que las cajas se envuelvan a la siguiente línea en pantallas pequeñas */
+    justify-content: center; /* Centra las cajas horizontalmente */
+    align-items: stretch; /* Hace que todas las cajas tengan la misma altura que la más alta */
+    gap: 30px; /* Añade un espacio de 30px entre las cajas */
+    max-width: 1200px; /* Opcional: Define un ancho máximo para el contenedor */
+    width: 90%; /* Opcional: Asegura que ocupe un 90% del ancho del padre */
+    margin: 20px auto; /* Opcional: Centra el contenedor y añade margen superior/inferior */
+}
+.caja-formulario{
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 400px; /* Permite que las cajas crezcan, se reduzcan y tengan un ancho base de 400px */
+    /* El max-width: 400px; que ya tenías en .caja-formulario también es bueno, pero flex: 1 1 400px es más potente aquí */
+    width: 90%;
+}
+
+.caja-formulario h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+.caja-formulario input[type="email"],
+.caja-formulario input[type="password"],
+.caja-formulario input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.caja-formulario input[type="submit"] {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.caja-formulario input[type="submit"]:hover {
+    background-color: #004d40;
+}
+
+/* Mensajes de feedback */
+.mensaje_resaltado, .mensaje_form {
+    background-color: #fff3e0; /* Naranja claro */
+    color: #e65100; /* Naranja oscuro */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ffcc80;
+}
+.mensaje_form.ok { /* Para mensajes de éxito */
+    background-color: #e8f5e9; /* Verde claro */
+    color: #2e7d32; /* Verde oscuro */
+    border-color: #a5d6a7;
+}
+
+
+.mensaje-error {
+    color: red;
+    margin-top: 10px;
+}
+.mensaje-ok-registro{
+    color: black;
+    margin-top: 10px;
+}
+.form_label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #484848;
+    font-size: 0.95em;
+    font-weight: bold;
+}

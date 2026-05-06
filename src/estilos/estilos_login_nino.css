@@ -1,0 +1,196 @@
+body {
+    font-family: sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column; /*le indicas que todos sus hijos (<header> y <main>) deben apilarse uno encima del otro. Esto evita que el header y el main intenten estar en la misma línea.*/
+    /*  SACAR esto: align-items: center; */
+    min-height: 100vh;
+    margin: 0;
+
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/*
+ * Nuevos estilos para el encabezado
+ * que contiene el botón y el título.
+ */
+.header-login {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header-login .boton-volver {
+    align-self: flex-start; /* asegura que el botón se quede a la izquierda */
+    margin-bottom: 15px;
+}
+
+.header-login h1 {
+    width: 100%;       /* el título ocupa todo el ancho */
+    text-align: center; /* se centra en ese ancho */
+    margin: 0;         /* quitamos márgenes raros */
+}
+
+/* * Estilo del botón "Volver".
+ * Ya lo tienes bien, solo asegúrate de que no tenga un margen superior o lateral que interfiera
+ */
+.boton-volver {
+    background-color: transparent;
+    color: #00796b;
+    border: 2px solid #00796b;
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    /* margin: 0; */
+}
+.boton-volver:hover {
+    background-color: #e0f2f1;
+    color: #004d40;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.boton-volver i {
+    font-size: 1.1em;
+}
+
+/* * Estilo del título.
+ * Puedes dejar el h1 sin cambios, ya que ahora el header-login lo centrará
+ */
+h1 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #00796b;
+    text-align: center;  
+}
+
+
+#notificacion_aria {
+    align-self: center;
+    /* opcional: si quieres que ocupe el 100% del ancho del header */
+    width: 100%;
+    
+}
+
+
+
+
+
+/* El main envuelve al login y lo centramos */
+.envoltorio-login {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* lo pegás arriba */
+    flex: 1;
+    margin-top: 20px;
+}
+
+
+/* Contenedor del formulario de login */
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    /* ******** SOLUCIÓN PARA LA RESPONSIVIDAD Y MARGEN LATERAL ******** */
+    /* Permite que el contenedor crezca, se reduzca y tenga un ancho base.
+       En pantallas pequeñas, se adapta al 90% del ancho, manteniendo márgenes. */
+    flex: 1 1 400px; 
+    width: calc(100% - 40px); /* Ancho del 100% menos 20px de margen en cada lado */
+    max-width: 400px;
+    margin: 20px; /* Margen de 20px en todos los lados */
+    /* *************************************************************** */
+
+    box-sizing: border-box; /* Asegura que el padding y borde se incluyan en el ancho */
+}
+
+
+.login-container h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.login-container input[type="submit"] {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.login-container input[type="submit"]:hover {
+    background-color: #004d40;
+}
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+.form_label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #484848;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+
+/* Mensajes de feedback */
+.mensaje_resaltado, .mensaje_form {
+    background-color: #fff3e0; /* Naranja claro */
+    color: #e65100; /* Naranja oscuro */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ffcc80;
+}
+.mensaje_form.ok { /* Para mensajes de éxito */
+    background-color: #e8f5e9; /* Verde claro */
+    color: #2e7d32; /* Verde oscuro */
+    border-color: #a5d6a7;
+}
+
+
+.mensaje-error {
+    color: red;
+    margin-top: 10px;
+}
+.mensaje-ok-registro{
+    color: black;
+    margin-top: 10px;
+}
+.form_label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #484848;
+    font-size: 0.95em;
+    font-weight: bold;
+}

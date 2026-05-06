@@ -1,0 +1,528 @@
+/* --- Reinicios Globales y Estilos Base --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluir padding y border en el ancho/alto total */
+    overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* O 'Arial, sans-serif' como alternativa */
+    color: #000000; /* Texto más oscuro para legibilidad */
+    background-color: #f0f2f5; /* Fondo claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+}
+
+/* --- Estilos del Encabezado Principal --- */
+.encabezado-principal {
+    background-color: #b2a1e0; /* Morado/Violeta, consistente con panel_nino.php */
+    color: rgb(29, 29, 29);
+    padding: 15px 25px; /* Más padding para un aspecto más suave */
+    display: flex;
+    justify-content: space-between; /* Coloca las secciones izquierda y derecha en extremos opuestos */
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
+    width: 100%; /* Asegura que abarque todo el ancho */
+    max-width: 1500px; /* Ancho máximo para que coincida con tu diseño general */
+    margin: 0 auto; /* Centrar el encabezado */
+}
+
+.seccion-izquierda-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre el botón de volver y la información de la actividad */
+    flex-wrap: wrap; /* Permite que se envuelvan si el contenido es demasiado ancho */
+}
+
+.boton-volver {
+    background-color: #7a5bbd; /* Morado ligeramente más oscuro para el botón */
+    color: rgb(255, 255, 255);
+    padding: 8px 15px;
+    border-radius: 25px; /* Botón en forma de píldora */
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em; /* Tamaño de lectura estándar */
+}
+
+.boton-volver:hover {
+    background-color: #6a4da9;
+    transform: translateY(-1px); /* Ligero efecto de elevación */
+}
+
+.boton-volver i {
+    font-size: 1.1em; /* Ícono ligeramente más grande */
+}
+
+.identidad-actividad {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el logo y el nombre */
+}
+
+.logo-actividad {
+    width: 60px;
+    height: 60px;
+    object-fit: cover; /* Cubre el área, recortando si es necesario */
+    object-position: center; /* Centra la imagen dentro del recorte */
+    border-radius: 50%; /* Lo hace circular */
+    border: 3px solid #f0f2f5; /* Borde claro para separación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para el logo */
+}
+
+.nombre-actividad {
+    margin: 0; /* Eliminar margen predeterminado de párrafo/encabezado */
+    font-size: 1.8em; /* Nombre de actividad grande y prominente */
+    font-weight: bold;
+    color: rgb(28, 28, 28);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Ligera sombra de texto */
+}
+
+.seccion-derecha-encabezado {
+    text-align: right; /* Alinear texto a la derecha */
+    display: flex;
+    flex-direction: column; /* Apilar saludo y contador de pasos */
+    align-items: flex-end; /* Alinearlos a la derecha dentro de su sección */
+}
+
+.saludo {
+    margin: 0 20px 5px 0; /* Margen: arriba, derecha (15px), abajo, izquierda */
+    font-size: 1.1em;
+    font-weight: bold; /* Ligeramente más negrita */
+    font-size: 18px;
+}
+
+
+/* Estilos para la barra de avance */
+#caja_avance {
+    width: 100%; /* O el ancho deseado */
+    background-color: #e0e0e0; /* Color de fondo de la pista de la barra */
+    border-radius: 5px;
+    height: 15px; /* Altura de la barra */
+    overflow: hidden; /* Asegura que la barra interna no sobresalga de los bordes redondeados */
+    margin-top: 10px; /* Espaciado con el elemento superior */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Sutil sombra interna */
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%; /* Ancho inicial de la barra (0% al principio) */
+    background-color: #4CAF50; /* Color verde para el progreso */
+    border-radius: 5px; /* Coincide con el border-radius del contenedor */
+    transition: width 0.3s ease-in-out; /* Transición suave para el cambio de ancho */
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablet y Escritorios más pequeños (ej. 1024px y abajo) */
+@media (max-width: 1024px) {
+    .encabezado-principal {
+        padding: 10px 20px;
+    }
+
+    .nombre-actividad {
+        font-size: 1.5em; /* Más pequeño en tablets */
+    }
+
+    .saludo, .contador-pasos {
+        font-size: 1em;
+    }
+}
+
+/* Dispositivos Móviles (ej. 768px y abajo) */
+@media (max-width: 768px) {
+    .encabezado-principal {
+        flex-direction: column; /* Apilar elementos del encabezado verticalmente */
+        align-items: flex-start; /* Alinear a la izquierda */
+        padding: 10px 15px;
+        gap: 10px; /* Espacio entre las secciones apiladas */
+    }
+
+    .seccion-izquierda-encabezado,
+    .seccion-derecha-encabezado {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        justify-content: flex-start; /* Alinear a la izquierda */
+    }
+
+    .identidad-actividad {
+        flex-wrap: wrap; /* Permitir que el logo y el nombre se envuelvan */
+        gap: 10px;
+    }
+
+    .logo-actividad {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nombre-actividad {
+        font-size: 1.3em; /* Aún más pequeño en móviles */
+        text-align: left;
+    }
+    
+    .boton-volver {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .seccion-derecha-encabezado {
+        align-items: flex-start; /* Alinear el saludo y el contador a la izquierda en móviles */
+        text-align: left;
+    }
+
+    .saludo, .contador-pasos {
+        font-size: 0.9em; /* Textos más pequeños */
+    }
+}
+
+/* Pantallas muy pequeñas (ej. 480px y abajo) */
+@media (max-width: 480px) {
+    .encabezado-principal {
+        padding: 8px 10px;
+    }
+
+    .nombre-actividad {
+        font-size: 1.1em;
+    }
+
+    .logo-actividad {
+        width: 40px;
+        height: 40px;
+    }
+    .boton-volver {
+        font-size: 0.8em;
+    }
+    .saludo, .contador-pasos {
+        font-size: 0.8em;
+    }
+}
+
+/* HASTA AQUI ESTOILOS PARA EL HEADER */
+
+/* --- Contenido Principal de la Página --- */
+.contenido-principal {
+    flex-grow: 1; /* Permite que ocupe el espacio restante en el body */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Apila la sección de pasos y los botones móviles */
+    align-items: center; /* Centra el contenido */
+    max-width: 1800px; /* Ancho máximo igual al header */
+    margin: 20px auto; /* Centrar en pantallas grandes y añadir espacio */
+    background-color: white; /* Fondo blanco como en panel_padres.php */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* --- Contenedor de Pasos de Actividad (Flexbox para desktop) --- */
+.contenedor-paso-actividad { /* Reemplaza a #contenedor */
+    display: flex;
+    justify-content: center; /* Centra los items si no ocupan todo el ancho */
+    align-items: stretch; /* Estira los elementos para que tengan la misma altura */
+    width: 100%; /* Ocupa todo el ancho del .contenido-principal */
+    gap: 15px; /* Espacio entre los elementos (botones y visualizador) */
+    margin-bottom: 20px; /* Espacio antes de los botones móviles (si existen) */
+}
+
+/* --- Botones de Navegación (Generales) --- */
+.boton-navegacion {
+    background-color: #6a4da9; /* Morado oscuro */
+    color: white;
+    border: none;
+    border-radius: 15px; /* Bordes ligeramente redondeados */
+    padding: 20px; /* Padding generoso */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em; /* Tamaño grande para las flechas de desktop */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0; /* Evita que se encojan */
+    min-width: 80px; /* Ancho mínimo para los botones */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-navegacion:hover {
+    background-color: #5b4291;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boton-navegacion:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boton-navegacion.disabled {
+    background-color: #ccc; /* Color gris para deshabilitados */
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* --- Botones de Navegación Específicos para Desktop --- */
+/* Por defecto, los botones con .boton-previo y .boton-siguiente se muestran. */
+/* Solo necesitaríamos ocultarlos en móviles */
+
+/* --- Visualizador de Paso (#principal) --- */
+.visualizador-paso { 
+    background-color: #ffffff; /* Blanco */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    flex-grow: 1; /* Permite que ocupe el espacio restante en el centro */
+    min-height: 400px; /* Altura mínima para que no colapse */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    color: #333; /* Texto dentro del paso, más oscuro */
+}
+
+/* Animaciones de desvanecimiento (Fade) */
+.visualizador-paso.fade-out {
+    opacity: 0;
+}
+
+.visualizador-paso.fade-in {
+    opacity: 1;
+}
+
+/* --- Contenido del Paso --- */
+.caja-texto-paso {
+    margin-bottom: 20px;
+    max-width: 90%; /* Limita el ancho del texto */
+}
+
+.texto-paso {
+    font-size: 2em; /* Texto grande y legible */
+    font-weight: bold;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.caja-imagen-paso {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener proporciones */
+    max-height: 350px; /* Altura máxima para la caja de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta partes de la imagen si se desborda */
+    background-color: #e2eaf0; /* Fondo claro para la caja de imagen */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.imagen-paso {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta la imagen dentro de la caja sin recortar */
+    border-radius: 8px;
+}
+
+.contenedor-audio-paso {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 50px; /* Bordes muy redondeados para un aspecto amigable */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;  /* centrado */
+    align-items: center;
+    margin-top: 10px;
+    width: 75%;
+}
+
+.audio-paso {
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para el reproductor de audio */
+    height: 40px;     /* altura estándar del reproductor */
+    border-radius: 10px;
+    outline: none; /* Quita el contorno de foco por defecto */
+}
+
+.mensaje-sin-pasos {
+    font-size: 1.5em;
+    color: #666;
+}
+
+/* --- Botones de Navegación para Móviles (Ocultos por defecto) --- */
+.botones-navegacion-movil {
+    display: none; /* Ocultos por defecto en desktop */
+    width: 100%;
+    justify-content: space-around; /* Espacio entre los botones */
+    gap: 15px; /* Espacio entre botones */
+    margin-top: 20px;
+    padding: 0 10px; /* Padding para que no se peguen a los bordes */
+}
+
+/* Estilos específicos para los botones móviles */
+.boton-previo-movil,
+.boton-siguiente-movil {
+    font-size: 1.1em; /* Texto más pequeño pero visible */
+    padding: 15px 20px;
+    border-radius: 30px; /* Más redondeado para móvil */
+    flex-grow: 1; /* Para que ocupen el espacio disponible equitativamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre texto e ícono */
+}
+
+/* --- Media Queries para Responsividad (Actualizadas para esta sección) --- */
+
+/* Tablet y Escritorios más pequeños (ej. 1024px y abajo) */
+@media (max-width: 1024px) {
+    .contenido-principal {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    /* Ocultar botones de desktop */
+    .contenedor-paso-actividad .boton-navegacion {
+        display: none;
+    }
+
+    /* Mostrar botones móviles y estilarlos */
+    .botones-navegacion-movil {
+        display: flex; /* Mostrar como flex para poner los botones uno al lado del otro */
+    }
+
+    .visualizador-paso {
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .texto-paso {
+        font-size: 1.6em;
+    }
+
+    .caja-imagen-paso {
+        max-height: 300px;
+    }
+}
+
+/* Dispositivos Móviles (ej. 768px y abajo) */
+@media (max-width: 768px) {
+    .contenido-principal {
+        padding: 10px;
+        margin: 10px auto;
+        box-shadow: none; /* Menos sombra en móvil para un look más limpio */
+    }
+
+    .contenedor-paso-actividad {
+        flex-direction: column; /* Apilar el contenido principal (solo el visualizador) */
+        gap: 10px;
+    }
+
+    .visualizador-paso {
+        min-height: 300px;
+        padding: 10px;
+    }
+
+    .texto-paso {
+        font-size: 1.3em;
+    }
+
+    .caja-imagen-paso {
+        max-width: 100%;
+        height: auto;
+        max-height: 250px;
+    }
+
+    .contenedor-audio-paso {
+        padding: 8px 15px;
+    }
+
+    .audio-paso {
+        max-width: 250px;
+    }
+
+    .botones-navegacion-movil {
+        flex-direction: column; /* Apilar los botones de navegación en pantallas muy pequeñas */
+        gap: 10px;
+        padding: 0; /* Sin padding horizontal extra */
+    }
+
+    .botones-navegacion-movil .boton-navegacion {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas (ej. 400px y abajo) */
+@media (max-width: 400px) {
+    .texto-paso {
+        font-size: 1.1em;
+    }
+    .botones-navegacion-movil .boton-navegacion {
+        font-size: 0.9em;
+    }
+}
+
+/* --- Estilos para el contenedor del modal --- */
+.modal-contenedor {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* --- Estilos para el contenido del modal --- */
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    color: black; /* Puedes eliminar esta línea si no quieres que el texto sea negro */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Estilos para el título del modal */
+.modal-titulo {
+    font-size: 2.2em;
+    color: #004d40;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Estilos para el texto del modal */
+.modal-texto {
+    font-size: 1.3em;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Estilos para el botón del modal */
+.boton-volver-modal {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.boton-volver-modal:hover {
+    background-color: #45a049;
+}
