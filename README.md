@@ -1,39 +1,39 @@
 # Asistea: Gestión y Asistencia para Usuarios con TEA
 
-**Asistea** es una aplicación web diseñada para niños con TEA (Trastorno del Espectro Autista) de entre 7 y 14 años y sus adultos responsables. Este proyecto fue desarrollado como **Práctica Profesional Supervisada (PPS)** en la UTN, integrando requisitos de accesibilidad **WCAG 2.1 Nivel AA** desde su fase de diseño.
+**Asistea** es una aplicación web diseñada para niños con TEA (Trastorno del Espectro Autista) de entre 7 y 14 años y sus adultos responsables. Este proyecto fue desarrollado como **Práctica Profesional Supervisada (PPS)** en la UTN, integrando requisitos de calidad y accesibilidad **WCAG 2.1 Nivel AA**.
 
-## 🚀 Punto de Entrada
-El archivo principal de navegación y acceso a la plataforma es:
-* **[asistea.php](./src/asistea.php)** (Actúa como el index principal del proyecto).
+## 🚀 Acceso al Proyecto
+* **[Demo del Proyecto (Interfaz)](https://tu-usuario.github.io/asistea-web-accesible-tea/)** *(Nota: Al ser un hosting estático, las funciones de PHP y Base de Datos no están activas en la demo, pero permite visualizar el diseño y la accesibilidad).*
+* **[Punto de Entrada al Código (asistea.php)](./src/asistea.php)**
 
 ## 🌟 Características Principales
-* **Desarrollo Fullstack:** Implementado en PHP con una arquitectura modular basada en componentes para una mejor mantenibilidad.
-* **Accesibilidad Nativa:** Diseño de alto contraste, navegación completa por teclado y compatibilidad certificada con el lector de pantalla **NVDA**.
-* **Gestión de Actividades:** Sistema relacional para la creación de secuencias de pasos multimedia (texto, imagen y audio).
-* **Integridad de Datos:** Lógica avanzada de limpieza de archivos en el servidor; al eliminar una cuenta o actividad, el sistema borra automáticamente los archivos físicos asociados (imágenes y audios) para optimizar el almacenamiento.
+* **Desarrollo Fullstack:** Implementado en PHP con una arquitectura modular para facilitar el mantenimiento y la escalabilidad.
+* **Accesibilidad Nativa:** Diseño de alto contraste, navegación completa por teclado y compatibilidad total con el lector de pantalla **NVDA**.
+* **Gestión de Actividades:** Sistema relacional para crear secuencias de pasos multimedia (texto, imagen y audio).
+* **Integridad de Datos (QA):** Lógica avanzada de limpieza en el servidor. Al eliminar una cuenta, el sistema borra automáticamente los archivos físicos asociados (imágenes y audios) para evitar "archivos huérfanos".
 
 ## 🛠️ Tecnologías y Herramientas
 * **Backend:** PHP / MySQL.
 * **Frontend:** HTML5 Semántico, CSS3 (Responsive Design), JavaScript.
-* **Validación de Calidad:** WAVE Evaluation Tool, Color Contrast Analyzer, NVDA.
+* **Validación de Calidad:** WAVE Evaluation Tool, Color Contrast Analyzer, Lector de pantalla NVDA.
 
 ## ♿ Enfoque en Calidad y Accesibilidad (QA)
-Como parte del proceso de formación en QA, se aplicaron las siguientes técnicas:
-* **Gestión de Foco:** Control programático mediante JavaScript (`.focus()`) para garantizar que los anuncios de estado y modales sean percibidos correctamente.
-* **Captura Multimedia:** Uso de **Canvas API** y conversión a **Base64** para la gestión de imágenes desde la cámara del dispositivo.
-* **Adaptabilidad:** Verificación de soporte para zoom del 200% y 400% sin pérdida de contenido (WCAG 1.4.4).
+Como parte del perfil de **Tester Funcional**, se aplicaron las siguientes técnicas de verificación:
+* **Gestión de Foco:** Control programático mediante JavaScript (`.focus()`) para asegurar que los anuncios de estado y modales sean percibidos por tecnologías asistivas.
+* **Captura Multimedia:** Uso de **Canvas API** y conversión a **Base64** para la gestión de evidencias fotográficas.
+* **Adaptabilidad:** Soporte de Zoom del 200% y 400% sin pérdida de funcionalidad (Criterio WCAG 1.4.4).
 
 ## 📂 Estructura del Repositorio
-* **[/src](./src/):** Contiene el código fuente de la aplicación.
-* **[/componentes](./componentes/):** Lógica de procesamiento, incluyendo la gestión de archivos y transacciones SQL.
-* **[/docs](./docs/):** Documentación técnica completa y reportes de avance de la PPS.
+* **[/src](./src/):** Código fuente principal de la aplicación.
+* **[/componentes](./componentes/):** Lógica de procesamiento y gestión de archivos.
+* **[/docs](./docs/):** Informes técnicos y planes de prueba de la PPS.
 * **[/database](./database/):** Script SQL para la replicación del modelo de datos.
 
 ## 📄 Documentación Técnica
-Para un análisis profundo del ciclo de vida del proyecto, puedes consultar los informes oficiales:
-1. [Informe de Planificación y Diseño (PS2)](./docs/Informe_Formulario_PS2.docx)
-2. [Informe de Avance y Desarrollo (PS3)](./docs/Informe_de_avance_PS3.docx)
-3. [Informe Final de Calidad y Accesibilidad (PS4)](./docs/anexo%20Informe%20final%20-%20PS4.docx)
+Puedes consultar el análisis detallado del ciclo de vida del proyecto aquí:
+1. [Informe de Planificación y Diseño (PS2)](./docs/Informe_Formulario_PS2.pdf)
+2. [Informe de Avance y Desarrollo (PS3)](./docs/Informe_de_avance_PS3.pdf)
+3. [Informe Final de Calidad y Accesibilidad (PS4)](./docs/anexo%20Informe%20final%20-%20PS4.pdf)
 
 ---
-*Este proyecto refleja mi compromiso con el desarrollo de software inclusivo y de alta calidad.*
+*Proyecto desarrollado por Leandro Biggi - Carrera de Ingeniería en Sistemas de Información (UTN).*
