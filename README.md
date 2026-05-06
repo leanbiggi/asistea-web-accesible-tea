@@ -25,7 +25,7 @@ Como parte del perfil de **Tester Funcional**, se aplicaron las siguientes técn
 
 ## 📂 Estructura del Repositorio
 * **[/src](./src/):** Código fuente principal de la aplicación.
-* **[/componentes](./src/componentes/):** Lógica de procesamiento y gestión de archivos.
+* **[/src/componentes](./src/componentes/):** Lógica de procesamiento y gestión de archivos.
 * **[/docs](./docs/):** Informes técnicos y planes de prueba de la PPS.
 * **[/database](./database/):** Script SQL para la replicación del modelo de datos.
 
