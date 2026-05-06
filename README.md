@@ -33,7 +33,7 @@ Como parte del perfil de **Tester Funcional**, se aplicaron las siguientes técn
 Puedes consultar el análisis detallado del ciclo de vida del proyecto aquí:
 1. [Informe de Planificación y Diseño (PS2)](./docs/Informe_Formulario_PS2.pdf)
 2. [Informe de Avance y Desarrollo (PS3)](./docs/Informe_de_avance_PS3.pdf)
-3. [Informe Final de Calidad y Accesibilidad (PS4)](./docs/anexo%20Informe%20final%20-%20PS4.pdf)
+3. [Informe Final de Calidad y Accesibilidad (PS4)](./docs/Informe_final_PS4.pdf)
 
 ---
 *Proyecto desarrollado por Leandro Biggi - Carrera de Ingeniería en Sistemas de Información (UTN).*
