@@ -3,45 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistea - Demo de Accesibilidad (Portafolio)</title>
-    <link href="src/estilos_asistea.css" rel="stylesheet"> 
+    <title>Asistea - Tu Asistente de Actividades (Demo)</title>
+    <link href="src/estilos/estilos_asistea.css" rel="stylesheet"> 
 </head>
 <body> 
+    <a href="#contenido-principal" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Saltar al contenido principal</a>
+
     <header class="hero-header" role="banner"> 
         <h1>Bienvenido a Asistea</h1>
-        <p>Tu aplicación para fomentar la autonomía y el aprendizaje de los niños/as.</p> 
+        <p>Tu aplicación para fomentar la autonomía y el aprendizaje de los niños/as a través de actividades diarias.</p> 
     </header>
 
     <main id="contenido-principal" role="main"> 
-        <section style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px; border: 1px solid #ffeeba; text-align: center;">
-            <p><strong>Nota de QA:</strong> Esta es una <strong>Demo Estática</strong>. GitHub Pages no procesa PHP. 
-            Para ver la lógica del servidor, revisa el código fuente en el repositorio.</p>
-        </section>
-
         <section class="seccion-informacion" aria-labelledby="por-que-asistea">
             <h2 id="por-que-asistea">¿Qué es Asistea?</h2>
             <div class="caja-info">
                 <h3>Promueve autonomía</h3>
-                <p>Guía a tus niños/as paso a paso en sus tareas diarias.</p>
+                <p>Guía a tus niños/as paso a paso en sus tareas diarias, permitiéndoles aprender y crecer con confianza.</p>
             </div>
             <div class="caja-info">
-                <h3>Rutinas Claras</h3>
-                <p>Estructura las actividades con secuencias visuales y auditivas.</p>
+                <h3>Rutinas Claras para el día a día</h3>
+                <p>Estructura las actividades con secuencias visuales y auditivas, transformando cada tarea en un juego.</p>
+            </div>
+            <div class="caja-info">
+                <h3>Tu Control Total</h3>
+                <p>Crea, personaliza y asigna actividades a cada niño/a, adaptándolas a sus necesidades y progreso.</p>
             </div>
         </section>
 
-        <section class="ejemplo-actividad-seccion">
-            <h3>Vista de la Interfaz</h3>
+        <section class="ejemplo-actividad-seccion" aria-labelledby="ejemplo-actividad">
+            <h3 id="ejemplo-actividad">Así se ve una actividad en Asistea</h3>
             <div class="ejemplo-actividad-contenido">
-                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de la interfaz de Asistea" style="max-width:100%; height:auto; border: 3px solid #333; border-radius: 10px;">
+                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de una actividad en Asistea que muestra el primer paso para Preparar un sandwich" role="img">
+                <div class="ejemplo-actividad-texto">
+                    <p>En Asistea, cada actividad se descompone en pasos sencillos, acompañados de imágenes claras y descripciones. Los niños pueden seguir el progreso a su ritmo, marcando cada paso completado.</p>
+                    <p>Esto facilita la comprensión y el desarrollo de la independencia.</p>
+                    <p>Imagina una actividad como "Preparar un Sándwich". Cada paso, desde "Buscar ingredientes" hasta "¡A disfrutar!", se presenta de forma visual y concisa.</p>
+                    <p><span class="boton boton-ejemplo" style="opacity: 0.7; cursor: not-allowed;">Vista previa (Solo en App completa)</span></p>
+                </div>
             </div>
         </section>
 
-        <section class="contenedor-principal">
-            <h2>Explorar el Código</h2>
-            <div class="botones-acceso" style="display: flex; gap: 10px; justify-content: center;">
-                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/blob/main/src/asistea.php" class="boton" style="background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Ver Código Principal</a>
-                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton" style="background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Ver Informes de QA</a>
+        <section class="seccion-informacion" aria-labelledby="como-usar-asistea">
+            <h2 id="como-usar-asistea">¿Cómo usar Asistea? Guía Rápida</h2>
+            
+            <div class="caja-info">
+                <img src="src/imagenes/login_padres.jpeg" alt="captura de la pantalla de inicio de sesión de adultos" role="img" class="img-guia-rapida">
+                <h3>1. Ingresa como Adulto responsable</h3>
+                <p>Regístrate y luego ingresa. Usa tu perfil de Adulto Responsable para crear la biblioteca de actividades y configurar los perfiles de los niños/as.</p>
+            </div>
+            
+            <div class="caja-info">
+                <img src="src/imagenes/form_crear_paso.jpeg" alt="Captura del formulario de creación de una nueva actividad" role="img" class="img-guia-rapida">
+                <h3>2. Crea y Personaliza</h3>
+                <p>Define los pasos con imágenes, texto y audio. Descompón cada tarea en pasos pequeños y secuenciales para una fácil comprensión.</p>
+            </div>
+
+            <div class="caja-info">
+                <img src="src/imagenes/form_asignacion.jpeg" alt="Captura de formulario de Asignaciones" role="img" class="img-guia-rapida">
+                <h3>3. Asigna y Monitorea</h3>
+                <p>Desde la sección de Asignaciones, programa las actividades para cada día. Luego, puedes verificar el estado de cada tarea.</p>
+            </div>
+            
+            <div class="caja-info">
+                <img src="src/imagenes/panel_nino.jpeg" alt="Captura del panel del niño/a" role="img" class="img-guia-rapida">
+                <h3>4. El niño/a ya puede ver sus actividades diarias</h3>
+                <p>El niño/a accede a su panel y encuentra las actividades pendientes para el día, visualizando la secuencia de pasos multimedia.</p>
+            </div>
+        </section>
+
+        <section class="contenedor-principal" aria-labelledby="ingresar-asistea">
+            <h2 id="ingresar-asistea">Explorar Código del Proyecto</h2>
+            <p>Selecciona una sección para auditar el código fuente en GitHub.</p>
+
+            <div class="botones-acceso">
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/blob/main/src/asistea.php" class="boton boton-padre" role="link">Ver Código Backend (PHP)</a>
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton boton-nino" role="link">Ver Informes de Calidad (QA)</a>
             </div>
         </section>
     </main>
