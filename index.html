@@ -4,55 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistea - Demo de Accesibilidad</title>
-    
-    <link rel="stylesheet" href="src/estilos/estilos_asistea.css?v=1.1">
-    
     <style>
-        /* Estilos de emergencia por si el archivo externo falla en cargar */
-        .hero-header { background-color: #242f37; color: white; padding: 60px 20px; text-align: center; }
-        .boton-padre { background-color: #00796b; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; display: inline-block; }
-        .boton-nino { background-color: #004a54; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; display: inline-block; }
+        /* ESTILOS EXTRAÍDOS DE TU ARCHIVO ORIGINAL PARA GARANTIZAR LA CARGA */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eeeeee;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #151e24;
+            text-align: center;
+        }
+
+        .hero-header {
+            background-color: #242f37; 
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #c85a21;
+            margin-bottom: 30px;
+        }
+
+        .hero-header h1 { font-size: 2.5em; margin: 0; }
+        
+        .seccion-informacion {
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .caja-info {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            width: 300px;
+            border-top: 5px solid #00796b;
+        }
+
+        .ejemplo-actividad-seccion {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 30px;
+            max-width: 900px;
+            border-radius: 15px;
+        }
+
+        .img-guia-rapida {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .botones-acceso {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .boton-padre, .boton-nino {
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.2s ease;
+        }
+
+        .boton-padre { background-color: #00796b; }
+        .boton-nino { background-color: #004a54; }
+        
+        .boton-padre:hover, .boton-nino:hover { transform: translateY(-3px); }
+
+        .saltar-contenido {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .saltar-contenido:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: #c85a21;
+            color: white;
+            padding: 10px;
+        }
     </style>
 </head>
 <body> 
+    <a href="#contenido-principal" class="saltar-contenido">Saltar al contenido principal</a>
+
     <header class="hero-header" role="banner"> 
         <h1>Bienvenido a Asistea</h1>
-        <p>Tu aplicación para fomentar la autonomía y el aprendizaje de los niños/as a través de actividades diarias.</p> 
+        <p>Tu aplicación para fomentar la autonomía y el aprendizaje.</p> 
     </header>
 
     <main id="contenido-principal" role="main"> 
-        <section class="seccion-informacion" aria-labelledby="por-que-asistea">
-            <h2 id="por-que-asistea">¿Qué es Asistea?</h2>
+        <section class="seccion-informacion">
             <div class="caja-info">
                 <h3>Promueve autonomía</h3>
-                <p>Guía a tus niños/as paso a paso en sus tareas diarias, permitiéndoles aprender y crecer con confianza.</p>
+                <p>Guía a tus niños/as paso a paso en sus tareas diarias.</p>
             </div>
             <div class="caja-info">
                 <h3>Rutinas Claras</h3>
                 <p>Estructura las actividades con secuencias visuales y auditivas.</p>
             </div>
-            <div class="caja-info">
-                <h3>Tu Control Total</h3>
-                <p>Crea, personaliza y asigna actividades adaptadas a cada necesidad.</p>
-            </div>
         </section>
 
         <section class="ejemplo-actividad-seccion">
-            <h3>Así se ve una actividad</h3>
-            <div class="ejemplo-actividad-contenido">
-                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de la interfaz" style="max-width: 80%; height: auto; border: 2px solid #ccc;">
-                <div class="ejemplo-actividad-texto">
-                    <p>En Asistea, cada actividad se descompone en pasos sencillos con apoyo multimedia.</p>
-                </div>
-            </div>
+            <h3>Vista Previa del Sistema</h3>
+            <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Interfaz de Asistea" style="max-width:100%; border-radius:10px;">
         </section>
 
-        <section class="contenedor-principal">
-            <h2>Explorar el Proyecto</h2>
-            <p>Accede a la documentación técnica y al código fuente:</p>
+        <section style="padding: 40px 0;">
+            <h2>Explorar Proyecto</h2>
             <div class="botones-acceso">
                 <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/blob/main/src/asistea.php" class="boton-padre">Ver Código PHP</a>
-                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton-nino">Ver Informes de Calidad</a>
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton-nino">Ver Documentación QA</a>
             </div>
         </section>
     </main>
