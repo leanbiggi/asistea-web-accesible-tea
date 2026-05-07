@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistea - Demo de Accesibilidad</title>
+    <title>Asistea - Demo de Accesibilidad (Portafolio)</title>
     <link href="src/estilos_asistea.css" rel="stylesheet"> 
 </head>
 <body> 
     <header class="hero-header" role="banner"> 
         <h1>Bienvenido a Asistea</h1>
-        <p>Aplicación para fomentar la autonomía de niños/as a través de actividades diarias.</p> 
+        <p>Tu aplicación para fomentar la autonomía y el aprendizaje de los niños/as.</p> 
     </header>
 
     <main id="contenido-principal" role="main"> 
+        <section style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px; border: 1px solid #ffeeba; text-align: center;">
+            <p><strong>Nota de QA:</strong> Esta es una <strong>Demo Estática</strong>. GitHub Pages no procesa PHP. 
+            Para ver la lógica del servidor, revisa el código fuente en el repositorio.</p>
+        </section>
+
         <section class="seccion-informacion" aria-labelledby="por-que-asistea">
             <h2 id="por-que-asistea">¿Qué es Asistea?</h2>
             <div class="caja-info">
                 <h3>Promueve autonomía</h3>
-                <p>Guía a tus niños/as paso a paso en sus tareas diarias, permitiéndoles aprender y crecer con confianza.</p>
+                <p>Guía a tus niños/as paso a paso en sus tareas diarias.</p>
             </div>
             <div class="caja-info">
                 <h3>Rutinas Claras</h3>
@@ -26,19 +31,17 @@
         </section>
 
         <section class="ejemplo-actividad-seccion">
-            <h3>Vista Previa de la Interfaz</h3>
+            <h3>Vista de la Interfaz</h3>
             <div class="ejemplo-actividad-contenido">
-                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de la interfaz de Asistea" style="max-width:100%; border-radius: 8px;">
-                <div class="ejemplo-actividad-texto">
-                    <p>Esta es una <strong>Demo Estática</strong>. Los botones de navegación y el sistema de usuarios requieren un servidor PHP/MySQL para funcionar.</p>
-                </div>
+                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de la interfaz de Asistea" style="max-width:100%; height:auto; border: 3px solid #333; border-radius: 10px;">
             </div>
         </section>
 
         <section class="contenedor-principal">
-            <h2>Explorar Proyecto</h2>
-            <div class="botones-acceso">
-                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea" class="boton boton-padre">Ver Repositorio y Documentación</a>
+            <h2>Explorar el Código</h2>
+            <div class="botones-acceso" style="display: flex; gap: 10px; justify-content: center;">
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/blob/main/src/asistea.php" class="boton" style="background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Ver Código Principal</a>
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton" style="background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Ver Informes de QA</a>
             </div>
         </section>
     </main>
