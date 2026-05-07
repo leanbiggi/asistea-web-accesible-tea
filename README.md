@@ -3,7 +3,7 @@
 **Asistea** es una aplicación web diseñada para niños con TEA (Trastorno del Espectro Autista) de entre 7 y 14 años y sus adultos responsables. Este proyecto fue desarrollado como **Práctica Profesional Supervisada (PPS)** en la UTN, integrando requisitos de calidad y accesibilidad **WCAG 2.1 Nivel AA**.
 
 ## 🚀 Acceso al Proyecto
-* **[Demo Visual (Interfaz Estática)](https://tu-usuario.github.io/asistea-web-accesible-tea/)**
+* **[Demo Visual (Interfaz Estática)](https://leanbiggi.github.io/asistea-web-accesible-tea/)**
   > *Nota para Reclutadores: GitHub Pages no soporta PHP/MySQL. Esta demo es una versión estática para visualizar el diseño, el contraste y la estructura accesible (WCAG 2.1 AA).*
 * **[Código Fuente Completo (PHP/Backend)](./src/asistea.php)**
 
