@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistea - Tu Asistente de Actividades (Demo)</title>
-    <link href="src/estilos/estilos_asistea.css" rel="stylesheet"> 
+    <title>Asistea - Demo de Accesibilidad</title>
+    
+    <link rel="stylesheet" href="src/estilos/estilos_asistea.css?v=1.1">
+    
+    <style>
+        /* Estilos de emergencia por si el archivo externo falla en cargar */
+        .hero-header { background-color: #242f37; color: white; padding: 60px 20px; text-align: center; }
+        .boton-padre { background-color: #00796b; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; display: inline-block; }
+        .boton-nino { background-color: #004a54; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; display: inline-block; }
+    </style>
 </head>
 <body> 
-    <a href="#contenido-principal" class="saltar-contenido" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Saltar al contenido principal</a>
-
     <header class="hero-header" role="banner"> 
         <h1>Bienvenido a Asistea</h1>
         <p>Tu aplicación para fomentar la autonomía y el aprendizaje de los niños/as a través de actividades diarias.</p> 
@@ -22,50 +28,31 @@
                 <p>Guía a tus niños/as paso a paso en sus tareas diarias, permitiéndoles aprender y crecer con confianza.</p>
             </div>
             <div class="caja-info">
-                <h3>Rutinas Claras para el día a día</h3>
-                <p>Estructura las actividades con secuencias visuales y auditivas, transformando cada tarea en un juego.</p>
+                <h3>Rutinas Claras</h3>
+                <p>Estructura las actividades con secuencias visuales y auditivas.</p>
             </div>
             <div class="caja-info">
                 <h3>Tu Control Total</h3>
-                <p>Crea, personaliza y asigna actividades a cada niño/a, adaptándolas a sus necesidades y progreso.</p>
+                <p>Crea, personaliza y asigna actividades adaptadas a cada necesidad.</p>
             </div>
         </section>
 
-        <section class="ejemplo-actividad-seccion" aria-labelledby="ejemplo-actividad">
-            <h3 id="ejemplo-actividad">Así se ve una actividad en Asistea</h3>
+        <section class="ejemplo-actividad-seccion">
+            <h3>Así se ve una actividad</h3>
             <div class="ejemplo-actividad-contenido">
-                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de una actividad en Asistea" role="img">
+                <img src="src/imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de la interfaz" style="max-width: 80%; height: auto; border: 2px solid #ccc;">
                 <div class="ejemplo-actividad-texto">
-                    <p>En Asistea, cada actividad se descompone en pasos sencillos, acompañados de imágenes claras y descripciones.</p>
-                    <p>Esto facilita la comprensión y el desarrollo de la independencia.</p>
-                    <p><span class="boton boton-ejemplo" style="opacity: 0.7; cursor: not-allowed; background-color: #666;">Vista previa limitada</span></p>
+                    <p>En Asistea, cada actividad se descompone en pasos sencillos con apoyo multimedia.</p>
                 </div>
             </div>
         </section>
 
-        <section class="seccion-informacion" aria-labelledby="como-usar-asistea">
-            <h2 id="como-usar-asistea">¿Cómo usar Asistea? Guía Rápida</h2>
-            
-            <div class="caja-info">
-                <img src="src/imagenes/login_padres.jpeg" alt="captura login adultos" class="img-guia-rapida">
-                <h3>1. Ingresa como Adulto responsable</h3>
-                <p>Regístrate y configura los perfiles de los niños/as.</p>
-            </div>
-            
-            <div class="caja-info">
-                <img src="src/imagenes/form_crear_paso.jpeg" alt="Captura creación actividad" class="img-guia-rapida">
-                <h3>2. Crea y Personaliza</h3>
-                <p>Define los pasos con imágenes, texto y audio.</p>
-            </div>
-        </section>
-
-        <section class="contenedor-principal" style="padding: 40px 20px; background: #f9f9f9; border-radius: 15px; margin: 20px auto; max-width: 800px;">
-            <h2 id="ingresar-asistea">Explorar el Proyecto</h2>
-            <p>GitHub Pages no procesa PHP. Haz clic abajo para auditar el código real y la documentación:</p>
-
-            <div class="botones-acceso" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/blob/main/src/asistea.php" class="boton-padre" style="padding: 15px 25px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold;">Ver Código Backend (PHP)</a>
-                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton-nino" style="padding: 15px 25px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; background-color: #004a54;">Ver Informes de QA</a>
+        <section class="contenedor-principal">
+            <h2>Explorar el Proyecto</h2>
+            <p>Accede a la documentación técnica y al código fuente:</p>
+            <div class="botones-acceso">
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/blob/main/src/asistea.php" class="boton-padre">Ver Código PHP</a>
+                <a href="https://github.com/leanbiggi/asistea-web-accesible-tea/tree/main/docs" class="boton-nino">Ver Informes de Calidad</a>
             </div>
         </section>
     </main>
