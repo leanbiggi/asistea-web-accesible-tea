@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="refresh" content="0; url=./src/asistea.php" />
-    <title>LINA - Redireccionando</title>
-</head>
-<body>
-    <p>Si no eres redireccionado, haz clic en <a href="./src/asistea.php">este enlace</a> para ver el proyecto.</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistea - Tu Asistente de Actividades</title>
+    <link href="src/estilos_asistea.css" rel="stylesheet"> </head>
+<body> 
+    <?php
+    include('componentes/enlace-saltar-a-contenido-principal.php');
+    ?>
+
+    <header class="hero-header" role="banner"> 
+        <h1>Bienvenido a Asistea</h1>
+        <p>Tu aplicación para fomentar la autonomía y el aprendizaje de los niños/as a través de actividades diarias.</p> 
+    </header>
+
+    <main id="contenido-principal" role="main"> 
+        <section class="seccion-informacion" aria-labelledby="por-que-asistea">
+            <h2 id="por-que-asistea">¿Qué es Asistea?</h2>
+            <div class="caja-info">
+                <h3>Promueve autonomía</h3>
+                <p>Guía a tus niños/as paso a paso en sus tareas diarias, permitiéndoles aprender y crecer con confianza.</p>
+            </div>
+            <div class="caja-info">
+                
+                <h3>Rutinas Claras para el día a día</h3>
+                <p>Estructura las actividades con secuencias visuales y auditivas, transformando cada tarea en un juego.</p>
+            </div>
+            <div class="caja-info">
+                
+                <h3>Tu Control Total</h3>
+                <p>Crea, personaliza y asigna actividades a cada niño/a, adaptándolas a sus necesidades y progreso.</p>
+        
+            </div>
+        </section>
+
+        <section class="ejemplo-actividad-seccion" aria-labelledby="ejemplo-actividad">
+            <h3 id="ejemplo-actividad">Así se ve una actividad en Asistea</h3>
+            <div class="ejemplo-actividad-contenido">
+                <img src="imagenes/ejemplo-act-prep.jpeg" alt="Captura de pantalla de una actividad en Asistea que muestra el primer paso  para Preparar un sandwich" role="img">
+                <div class="ejemplo-actividad-texto">
+                    <p>En Asistea, cada actividad se descompone en pasos sencillos, acompañados de imágenes claras y descripciones. Los niños pueden seguir el progreso a su ritmo, marcando cada paso completado.</p>
+                    <p>Esto facilita la comprensión y el desarrollo de la independencia.</p>
+                    <p>Imagina una actividad como "Preparar un Sándwich". Cada paso, desde "Buscar ingredientes" hasta "¡A disfrutar!", se presenta de forma visual y concisa para que sea fácil de seguir.</p>
+                    <p><a href="ejemplo_actividad.php" class="boton boton-ejemplo">Ver</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-informacion" aria-labelledby="como-usar-asistea">
+        <h2 id="como-usar-asistea">¿Cómo usar Asistea? Guía Rápida</h2>
+        
+        <div class="caja-info">
+            <img src="imagenes/login_padres.jpeg" 
+                alt="captura de la pantalla de inicio de sesión de adultos" 
+                role="img" 
+                class="img-guia-rapida">
+            <h3>1. Ingresa como Adulto responsable</h3>
+            <p>Regístrate y luego ingresa. Usa tu perfil de Adulto Responsable para crear la biblioteca de actividades y configurar los perfiles de los niños/as.</p>
+        </div>
+        
+        <div class="caja-info">
+            <img src="imagenes/form_crear_paso.jpeg" 
+                alt="Captura del formulario de creación de una nueva actividad con imagen, audio y pasos" 
+                role="img" 
+                class="img-guia-rapida">
+            <h3>2. Crea y Personaliza</h3>
+            <p>Engresando en el botón "Gestionar pasos" de cada actividad creada en el paso anterior: define los pasos con imágenes, texto y audio. Descompón cada tarea en pasos pequeños y secuenciales para una fácil comprensión. El nivel de descomposicion de cada tarea se lo das tú.</p>
+        </div>
+
+        <div class="caja-info">
+            <img src="imagenes/form_asignacion.jpeg" 
+                alt="Captura de formulario de Asignaciones" 
+                role="img" 
+                class="img-guia-rapida">
+                <img src="imagenes/lista_asignaciones.jpeg" 
+                alt="Lista de asignaciones" 
+                role="img" 
+                class="img-guia-rapida">
+            <h3>3. Asigna y Monitorea</h3>
+            <p>Desde la sección de Asignaciones, programa las actividades para cada día. Luego, puedes verificar el estado de cada tarea.</p>
+        </div>
+        
+        <div class="caja-info">
+            <img src="imagenes/panel_nino.jpeg" 
+                alt="Captura del panel del niño/a" 
+                role="img" 
+                class="img-guia-rapida">
+                <img src="imagenes/panel_actividad.jpeg" 
+                alt="Visualizador de pasos de una actividad" 
+                role="img" 
+                class="img-guia-rapida">
+            <h3>4. El niño/a ya puede ver sus actividades diarias</h3>
+            <p>El niño/a accede a su panel y encuentra las actividades pendientes para el día. Al iniciar una actividad, visualiza la secuencia de pasos y navega a través de ellos. Una vez completada, el sistema registra el estado, permitiendo al adulto responsable monitorear el cumplimiento de las rutinas asignadas.</p>
+        </div>
+    </section>
+    <section class="contenedor-principal" aria-labelledby="ingresar-asistea">
+        <h2 id="ingresar-asistea">Ingresar a Asistea</h2>
+        <p>Selecciona tu perfil para acceder a la aplicación.</p>
+
+        <div class="botones-acceso">
+            <a href="panel_padres.php" class="boton boton-padre" role="link">Adulto Responsable</a>
+            <a href="panel_nino.php" class="boton boton-nino" role="link">Niño/a</a>
+        </div>
+    </section>
+    </main>
 </body>
 </html>
